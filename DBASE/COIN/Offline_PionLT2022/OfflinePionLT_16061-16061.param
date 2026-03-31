@@ -4,17 +4,17 @@ raddeg=3.14159265/180
 cminch=2.54
 
 ; General Hall-C parameter files
-#include "PARAM/GEN/genflags.param"
-#include "PARAM/GEN/gdebug.param"
-#include "PARAM/GEN/gtarget.param"
-#include "PARAM/GEN/gbeam.param"
-#include "PARAM/GEN/gscalers.param"
+#include "PARAM/GEN/Offline_PionLT2022/genflags.param"
+#include "PARAM/GEN/Offline_PionLT2022/gdebug.param"
+#include "PARAM/GEN/Offline_PionLT2022/gtarget.param"
+#include "PARAM/GEN/PionLT_PARAM/gbeam_June22.param"
+#include "PARAM/GEN/PionLT_PARAM/gscalers_14965-17000.param"
 
 ; General HMS parameter files
 ; Note: hmsflags.param includes spectrometer offsets and options.
-#include "PARAM/HMS/GEN/hcana.param"
+#include "PARAM/HMS/GEN/PionLT_PARAM/hcana_newoptics_6p667.param"
 #include "PARAM/HMS/GEN/hdebug.param"
-#include "PARAM/HMS/GEN/hmsflags.param"
+#include "PARAM/HMS/GEN/PionLT_PARAM/hmsflags_HeePCoin_Global_Offset_6p667_BE10p5.param"
 #include "PARAM/HMS/GEN/htracking.param"
 #include "PARAM/HMS/GEN/Offline_PionLT/h_reftime_cut_PionLT.param"
 
@@ -44,9 +44,9 @@ cminch=2.54
 
 ; General SHMS parameter files
 ; Note: shmsflags.param includes spectrometer offsets and options.
-#include "PARAM/SHMS/GEN/pcana.param"
+#include "PARAM/SHMS/GEN/PionLT_PARAM/pcana.param"
 #include "PARAM/SHMS/GEN/pdebug.param"
-#include "PARAM/SHMS/GEN/shmsflags.param"
+#include "PARAM/SHMS/GEN/PionLT_PARAM/shmsflags_HeePCoin_Global_Offset.param"
 #include "PARAM/SHMS/GEN/Online_PionLT2022/ptracking.param"
 #include "PARAM/SHMS/GEN/Offline_PionLT/p_reftime_cut_PionLT_elRealTrig.param"
 
@@ -55,7 +55,7 @@ cminch=2.54
 #include "PARAM/SHMS/DC/PionLT_PARAM/pdc_geom.param"
 #include "PARAM/SHMS/HODO/phodo_geom.param"
 #include "PARAM/SHMS/HGCER/phgcer_geom.param"
-#include "PARAM/SHMS/AERO/paero_geom.param"
+#include "PARAM/SHMS/AERO/Offline_PionLT/paero_geom_2022.param"
 #include "PARAM/SHMS/CAL/PionLT_PARAM/pcal_geom.param"
 
 ; SHMS default cut parameter files
@@ -79,5 +79,5 @@ cminch=2.54
 
 
 ; Coin trigger parameters
-#include "PARAM/TRIG/Offline_PionLT/tcoin_PionLT_elReal.param"
+#include "PARAM/TRIG/Offline_PionLT/tcoin_PionLT_final.param"
  
