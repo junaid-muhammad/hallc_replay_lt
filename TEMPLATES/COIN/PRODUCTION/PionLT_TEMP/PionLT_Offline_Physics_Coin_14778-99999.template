@@ -255,7 +255,10 @@ PLT_SHMS_Hodo_S1XY	:	{phodo_s1XY_eff}
 PLT_SHMS_Hodo_S2XY	:	{phodo_s2XY_eff}
 
 PLT_SHMS_Hodo_3_of_4_EFF	:	{phodo_3_of_4_eff}
+PLT_SHMS_Hodo_3_of_4_EFF_Uncer : {phodo_3_of_4_eff_uncer}
+
 PLT_SHMS_Hodo_4_of_4_EFF	:	{phodo_4_of_4_eff}
+PLT_SHMS_Hodo_4_of_4_EFF_Uncer : {phodo_4_of_4_eff_uncer}
 
 =:=:=:=:=
 =  HMS  =
@@ -270,7 +273,10 @@ PLT_HMS_Hodo_S1XY	:	{hhodo_s1XY_eff}
 PLT_HMS_Hodo_S2XY	:	{hhodo_s2XY_eff}
 
 PLT_HMS_Hodo_3_of_4_EFF	:	{hhodo_3_of_4_eff}
+PLT_HMS_Hodo_3_of_4_EFF_Uncer : {hhodo_3_of_4_eff_uncer}
+
 PLT_HMS_Hodo_4_of_4_EFF	:	{hhodo_4_of_4_eff}
+PLT_HMS_Hodo_4_of_4_EFF_Uncer : {hhodo_4_of_4_eff_uncer}
 
 ****************************
 * Calorimeter Efficiencies *
