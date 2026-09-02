@@ -272,3 +272,12 @@ KLT_HMS_Hodoscope_S1X_Triggers		:	{H.S1X.scalerCut}
 
 KLT_SHMS_Hodoscope_S1X_Rate         :     {(P.S1X.scalerCut/P.1MHz.scalerTimeCut)/1000.:%.3f} kHz 
 KLT_HMS_Hodoscope_S1X_Rate          :     {(H.S1X.scalerCut/H.1MHz.scalerTimeCut)/1000.:%.3f} kHz 
+
+===================
+== coinblock_corr ==
+===================
+CoinBlocking_Good      : {CoinBlocking_Good.npassed}
+CoinBlock_Total        : {CoinBlocking_Total.npassed}
+coinblock_corr         : {(CoinBlocking_Good.npassed)/(CoinBlocking_Total.npassed):%.4f}
+coinblock_sys_unct     : {((CoinBlocking_SysUp.npassed)-(CoinBlocking_SysDown.npassed))/(2*(CoinBlocking_Total.npassed))}
+coinblock_stat_unct    : {sqrt((((CoinBlocking_Good.npassed)/(CoinBlocking_Total.npassed))*(1-(CoinBlocking_Good.npassed)/(CoinBlocking_Total.npassed)))/CoinBlocking_Total.npassed)}
