@@ -32,6 +32,7 @@
 
 ;ppcentral_offset = 0.0
 ppcentral_offset = -0.45
+;ppcentral_offset = -0.17
 
 ;; SHMS Central Angle (Theta) Offset (Pion-LT Data) - (Applied in rad unit)
 
