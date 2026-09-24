@@ -311,15 +311,26 @@ void FullReplay_PionLT_HeeP_Coin (Int_t RunNumber = 0, Int_t MaxEvent = 0) {
    analyzer->SetCutFile("DEF-files/PRODUCTION/PionLT_DEF/Aero_1p011/Offline_HeeP_Coin_Cuts.def");
   }
 
-
   // File to record accounting information for cuts
   analyzer->SetSummaryFile(Form("/volatile/hallc/c-pionlt/junaid/REPORT_OUTPUT/SUMMARY_OUTPUT/HeeP/PionLT_HeePCoin_summary_production_%d_%d.report", RunNumber, MaxEvent));  // optional
   // Start the actual analysis.
   analyzer->Process(run);
   // Create report file from template
+  if (RunNumber >= 11700 &&RunNumber <= 12003){
+    analyzer->PrintReport("TEMPLATES/COIN/PRODUCTION/PionLT_TEMP/PionLT_Offline_HEEP_Coin_11767-12003.template",
+  Form("REPORT_OUTPUT/Analysis//HeeP/PionLT_replay_HeeP_coin_%d_%d.report", RunNumber, MaxEvent));  // optional
+  } else if (RunNumber >= 12004 && RunNumber <= 14777){
+    analyzer->PrintReport("TEMPLATES/COIN/PRODUCTION/PionLT_TEMP/PionLT_Offline_HEEP_Coin_12004-14777.template",
+  Form("REPORT_OUTPUT/Analysis//HeeP/PionLT_replay_HeeP_coin_%d_%d.report", RunNumber, MaxEvent));  // optional
+  } else if (RunNumber >= 14778){
+    analyzer->PrintReport("TEMPLATES/COIN/PRODUCTION/PionLT_TEMP/PionLT_Offline_HEEP_Coin_14778-99999.template",
+  Form("REPORT_OUTPUT/Analysis//HeeP/PionLT_replay_HeeP_coin_%d_%d.report", RunNumber, MaxEvent));  // optional
+  }
+
+  // Create report file from template
   //  analyzer->PrintReport("TEMPLATES/COIN/PRODUCTION/COIN_PROD.template",
-  analyzer->PrintReport("TEMPLATES/COIN/PRODUCTION/PionLT_TEMP/PionLT_Offline_HEEP_Coin.template",
-  Form("/volatile/hallc/c-pionlt/junaid/REPORT_OUTPUT/Analysis/HeeP/PionLT_replay_HeeP_coin_%d_%d.report", RunNumber, MaxEvent));  // optional
+  //analyzer->PrintReport("TEMPLATES/COIN/PRODUCTION/PionLT_TEMP/PionLT_Offline_HEEP_Coin.template",
+  //Form("/volatile/hallc/c-pionlt/junaid/REPORT_OUTPUT/Analysis/HeeP/PionLT_replay_HeeP_coin_%d_%d.report", RunNumber, MaxEvent));  // optional
   // Helicity scalers output
 //  analyzer->PrintReport("TEMPLATES/HMS/SCALERS/hhelscalers.template",
 //                        Form("/volatile/hallc/c-pionlt/junaid/REPORT_OUTPUT/Scalers/HeeP/PionLT_replay_hms_helicity_scalers_%d_%d.report", RunNumber, MaxEvent));  // optional  
